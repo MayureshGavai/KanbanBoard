@@ -7,7 +7,7 @@ const Column = ({ column, tasks, index }) => {
     <Draggable draggableId={column.id} index={index}>
         { provided =>(
         <div {...provided.draggableProps} ref={provided.innerRef} 
-            className="bg-white border rounded-md border-black/[0.5] font-Archivo flex flex-col">
+            className=" rounded-md  font-Inter bg-slate-100 flex flex-col" >
                 <div className="flex justify-between items-center px-4 py-1">
       <h1 {...provided.dragHandleProps} className="text-lg font-medium ">{column.title}</h1>
                     <h1 className="bg-slate-950 rounded-full px-2 py-1 text-white text-xs">{column?.taskIds?.length}</h1>
@@ -16,7 +16,7 @@ const Column = ({ column, tasks, index }) => {
         {(provided,snapshot) => {
           return (
             <div ref={provided.innerRef} {...provided.droppableProps}
-                className={`px-4 py-1 grow ${snapshot.isDraggingOver ? 'bg-sky-200' : 'bg-white'}`}
+                className={`px-4 py-1 grow ${snapshot.isDraggingOver ? 'bg-sky-200' : 'bg-slate-100'}`}
             >
               <Task tasks={tasks} />
               {provided.placeholder}

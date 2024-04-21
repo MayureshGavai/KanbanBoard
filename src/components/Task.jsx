@@ -38,8 +38,8 @@ const Task = ({ tasks }) => {
                   {...provided.draggableProps}
                   {...provided.dragHandleProps}
                 >
-                  <div className={`my-1 p-2 border border-black/[0.5] rounded-md ${snapshot.isDragging ? 'bg-green-300' : 'bg-white'} `} >
-                    <h1 className="text-lg font-semibold leading-none">{task.content}</h1>
+                  <div className={`my-1 p-2  shadow-xl rounded-md ${snapshot.isDragging ? 'bg-green-300' : 'bg-white'} `} >
+                    <h1 className="text-base font-semibold leading-none">{task.content}</h1>
                     <h1 className="text-sm my-2 leading-snug text-black/[0.9]">{task.description}</h1>
                     <div className="flex justify-between items-center mt-2">
                     <h1 className={`w-fit text-xs capitalize rounded-full  px-2 py-0.5 text-white ${getPriorityColor(task.priority)}`}>

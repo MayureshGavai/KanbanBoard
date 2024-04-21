@@ -18,11 +18,11 @@ const App = () => {
 
   return (
     <>
-      <div className='flex px-8 py-4 justify-between items-center font-Archivo border-b '>
-        <h1 className='font-semibold text-2xl md:text-3xl'>Kanban Board</h1>
+      <div className='flex px-8 py-2 justify-between items-center font-Inter border-b shadow-sm'>
+        <h1 className='font-semibold text-xl md:text-xl'>Kanban Board</h1>
       <AddTask setData={setTaskData}/>
       </div>
-    <div className='m-6'>
+    <div className='mx-6 my-2'>
       <DragDropContext
         onDragEnd={dragEnd}
       >
